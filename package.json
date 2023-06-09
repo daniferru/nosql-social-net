@@ -1,0 +1,29 @@
+{
+  "name": "nosql-social-net",
+  "version": "1.0.0",
+  "description": "by Daniella Ferrufino ![Github licence](http://img.shields.io/badge/license-MIT-yellowgreen.svg)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.4",
+    "mongoose": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniferru/nosql-social-net.git"
+  },
+  "bugs": {
+    "url": "https://github.com/daniferru/nosql-social-net/issues"
+  },
+  "homepage": "https://github.com/daniferru/nosql-social-net#readme"
+}
