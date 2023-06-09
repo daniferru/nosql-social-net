@@ -1,5 +1,3 @@
-const { timeStamp, time } = require("console");
-
 const addDateSuffix = date => {
     let dateStr = date.toString();
 

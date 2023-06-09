@@ -9,7 +9,7 @@ const userSchema = new Schema(
             trim: true
         },
         email: {
-            trpe: String,
+            type: String,
             unique: true,
             required: true,
             trim: true,
@@ -17,12 +17,12 @@ const userSchema = new Schema(
         },
         thoughts: [
             {
-                type: Schema.Types.ObjectedId,
+                type: Schema.Types.ObjectId,
                 ref: 'Thought'
             }
         ],
         friends: [{
-            type: Schema.Types.ObjectedId,
+            type: Schema.Types.ObjectId,
             ref: 'User'
         }]
     },
