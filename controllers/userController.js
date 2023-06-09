@@ -1,6 +1,6 @@
-const { User, Thought }= require('../models');
+const { User }= require('../models');
 
-module.exports = {
+const userController = {
     async getAllUsers (req, res) {
         try {
             const userData = await User.find();
@@ -91,3 +91,5 @@ module.exports = {
         };
     },
 }
+
+module.exports = userController;
