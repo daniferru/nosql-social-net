@@ -1,4 +1,4 @@
-const { Thought, User } = require('../moodel/index');
+const { Thought, User } = require('../models/index');
 
 const thoughtController = {
     //get all thoughts

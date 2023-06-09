@@ -9,7 +9,6 @@ const {
     addFriend,
     removeFriend
 } = require('../../controllers/thoughtController');
-const { updateUser } = require('../../controllers/userController');
 
 router
 .route('/')
