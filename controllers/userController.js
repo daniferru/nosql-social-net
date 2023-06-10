@@ -22,11 +22,12 @@ const userController = {
         }
     },
     //create user
-    async createUser (rreq, res) {
+    async createUser (req, res) {
         try {
             const userData = await User.create(req.body);
             res.json(userData);
         } catch (err) {
+            console.log(err);
             res.status(500).json(err);
         }
     },
@@ -34,27 +35,29 @@ const userController = {
     async updateUser (req, res) {
         try {
             const userData = await User.findOneAndUpdate(
-                { _id: req.params.userId },
+                { _id: req.params.id },
                 { $set: req.body },
                 { runValidators: true, new: true }
             );
             if (!userData) {
                 return res.status(404).json({ message: 'No user with this id was found.' });
             }
-            res.json(err);
-        } catch {
+            res.json(userData);
+        } catch (err) {
+            console.log(err);
             res.status(500).json(err);
         }
     },
     //delete user
     async deleteUser (req, res) {
         try {
-            const userData = await User.findOneAndDelete({ _id: req.params.userId });
+            const userData = await User.findOneAndDelete({ _id: req.params.id });
             if (!userData) {
                 return res.status(404).json({ message: 'No user was found with this id' });
             }
             res.json(userData);
         } catch (err) {
+            console.log(err);
             res.status(500).json(err);
         }
     },
@@ -62,7 +65,7 @@ const userController = {
     async addFriend (req, res) {
         try {
             const user = await User.findOneAndUpdate(
-                { _id: req.params.userId },
+                { _id: req.params.id },
                 { $addToSet: { friends: req.params.friendId }},
                 { runValidators: true, new: true }
             );
@@ -78,7 +81,7 @@ const userController = {
     async removeFriend (req, res) {
         try {
             const userData = await User.findOneAndUpdate(
-                { _id: req.params.userId },
+                { _id: req.params.id },
                 { $pull: { friends: req.params.friendId }},
                 { runValidators: true, new: true }
             );

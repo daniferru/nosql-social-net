@@ -9,7 +9,7 @@ To run this application, you must have MongoDB installed on your local machine t
 
 ## Usage
 After installing npm packages, the application will be invoked by using 'npm start' command line. Open any application that simplifies interation and design of HTTP-based APIs like [insomnia](https://insomnia.rest/download). You will then be able to create, read, update, and delete users, thougts, and reactions. [Walkthrough]()<br>
-<img src="">
+<img src="/images/nosqlnet.PNG">
 
 ## License
 This application is licensed under the MIT license.
